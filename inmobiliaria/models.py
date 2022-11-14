@@ -10,7 +10,7 @@ class Cargo(models.Model):
 
 
     def __str__(self):
-        fila = self.nombre
+        fila = self.nombre + " - " + self.actividad
         return fila
 
 
@@ -21,12 +21,12 @@ class Departamento(models.Model):
     actividad = models.CharField(max_length=500,verbose_name='Actividad')
 
     def __str__(self):
-        fila = self.nombre
+        fila = self.nombre + " - " + self.actividad
         return fila
    
 class Meta:
     verbose_name_plural = 'Departamentos'   
-    ordering = ['id']
+    ordering = ['nombre']
 
 class Empleado(models.Model):
     id = models.AutoField(primary_key=True)
@@ -38,7 +38,7 @@ class Empleado(models.Model):
     imagen = models.ImageField(upload_to='imagenes/', verbose_name='Imagen', null=False)
 
     def __str__(self):
-        fila = "Nombres:  " + self.nombres + " " + " - Apellidos: " + self.apellidos
+        fila = "NOMBRES:  " + self.nombres + " " + " - APELIDOS: " + self.apellidos + " - CARGO: " + self.cargo.nombre + " - DEPARTAMENTO: " + self.departamento.nombre
         return fila
 
 
