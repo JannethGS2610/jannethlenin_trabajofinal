@@ -76,17 +76,27 @@ WSGI_APPLICATION = 'SistemaVivento.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'inmobiliaria',
-        'USER': 'root',
-        'PASSWORD': '',
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'inmobiliaria',
+         'USER': 'root',
+         'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306'
-    }
-}
+         'PORT': '3306'
+     }
+ }
 
-
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'sql_server.pyodbc',
+#        'NAME': 'django_vivento',
+#        'USER': 'sa',
+#         'PASSWORD': 'Cloudred987',
+#         'HOST': 'DESAMB002',
+#         'PORT': '',
+#        'OPTIONS': {'driver':'ODBC Driver 13 for SQL Server'}
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
